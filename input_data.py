@@ -28,7 +28,7 @@ class InputData:
             return self.height()
 
     def num_figure(self, height) -> int:
-        """Запрашивает номер фигуры и проверяет корректность ввода."""
+        """Запрашивает номер фигуры и проверяет корректность ввода"""
         self.height = height
         self.display_figures()
         print(f'Введите номер фигуры c высотой {self.height}:')
