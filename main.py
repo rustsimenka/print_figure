@@ -1,5 +1,6 @@
 from input_data import InputData
 from figures import Figure
+from figures import SwitchFigure
 
 
 def commands() -> None:
@@ -7,7 +8,7 @@ def commands() -> None:
     height = input_data.height()
     num_figure = input_data.num_figure(height)
     figure = Figure(height)
-    choice_figure = figure.switch_figure(num_figure)
+    choice_figure = SwitchFigure(num_figure, height)
 
 
 if __name__ == '__main__':
