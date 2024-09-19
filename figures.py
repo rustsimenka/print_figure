@@ -5,19 +5,19 @@ class Figure:
     def __init__(self, height: int):
         self.height = height
 
-    def triangle(self) -> None:
+    def print_triangle(self) -> None:
         for i in range(self.height):
             print(' ' * (self.height - i) + '*' * i * 2 + '*')
 
-    def square(self) -> None:
+    def print_square(self) -> None:
         for _ in range(self.height):
             print('*' * self.height)
 
-    def triangle_revers(self) -> None:
+    def print_triangle_revers(self) -> None:
         for i in range(self.height):
             print(' ' + ' ' * i + '*' * (self.height - i - 1) * 2 + '*')
 
-    def rhombus(self) -> None:
+    def print_rhombus(self) -> None:
 
         for i in range(self.height // 2):
             print(' ' * (self.height // 2 - i) + '*' * i * 2 + '*')
@@ -35,13 +35,13 @@ class SwitchFigure:
         match num_figure:
             case 1:
                 print(f'печатаю треугольник с высотой {self.height}:', end='\n''\n')
-                return Figure.triangle(self)
+                return Figure.print_triangle(self)
             case 2:
                 print(f'печатаю квадрат с высотой {self.height}:', end='\n''\n')
-                return Figure.square(self)
+                return Figure.print_square(self)
             case 3:
                 print(f'печатаю обратный треугольник с высотой {self.height}:', end='\n''\n')
-                return Figure.triangle_revers(self)
+                return Figure.print_triangle_revers(self)
             case 4:
                 print(f'печатаю ромб с высотой {self.height}:', end='\n''\n')
-                return Figure.rhombus(self)
+                return Figure.print_rhombus(self)
